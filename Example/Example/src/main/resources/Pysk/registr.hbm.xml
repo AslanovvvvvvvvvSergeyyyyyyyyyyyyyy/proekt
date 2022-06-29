@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Pysk.Enity.Reg" table="register" catalog="example">
+        <id name="ID_REG" type="java.lang.Integer">
+            <column name="id_reg" />
+            <generator class="identity" />
+        </id>
+        <property name="NAME" type="string">
+            <column name="name" length="40" not-null="true" unique="true" />
+        </property>
+        <property name="LOGIN" type="string">
+            <column name="login" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="PASSWORD" type="string">
+            <column name="password" length="30" not-null="true" unique="true" />
+        </property>
+        <property name="ONLINE_REG" type="boolean">
+            <column name="online_reg" length="50" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>
